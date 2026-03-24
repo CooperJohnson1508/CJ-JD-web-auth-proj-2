@@ -24,7 +24,7 @@ In this project, you will design and build an app of your own choosing in Python
 
 | Part I: Planning & Design (10 pts) |
 |----------|
-- Decide on an app idea — it can be anything you want (game, social app, journal, mini-tool, etc.).
+- Decide on an app idea — it can be anything you want, but the app needs to display content unique to each user.
 - Write or sketch out how your app will work and what features it will include.
 - Complete the `planning_and_design.txt` file showing your step-by-step plan.
 - Do not move forward until you’ve checked your plan with Mr. Jackson.
