@@ -32,6 +32,7 @@ def seed_database():
     }
     
 <<<<<<< HEAD
+<<<<<<< HEAD
     ]
 dlist=[ sample_users, sample_pets]
 =======
@@ -41,6 +42,10 @@ dlist=[ sample_users, sample_pets]
         ("charlie", "dog", "Pumpkin", 403002),
     ]
 >>>>>>> 12f0fea (thursday work)
+=======
+    ]
+dlist=[ sample_users, sample_pets]
+>>>>>>> e356aae (seed_db update)
 
     try:
         for username, password in sample_users:
