@@ -5,14 +5,27 @@ def get_db():
     conn.row_factory = sqlite3.Row
     return conn
 
+def get_entries_db():
+    conn = sqlite3.connect("player_data.db")
+    conn.row_factory = sqlite3.Row
+    return conn
+
 def init_db():
     conn = get_db()
-    # Add your new table between lines 15 & 16.
+    e_conn = get_entries_db()
     conn.execute("""
         CREATE TABLE IF NOT EXISTS users (
             username TEXT PRIMARY KEY,
             password TEXT
         )
     """)
+    e_conn.execute("""
+        CREATE TABLE IF NOT EXISTS player_data (
+            username TEXT PRIMARY KEY,
+            pet_type TEXT,
+            pet_name TEXT,
+            pets INT
+            )
+        """)
     conn.commit()
     conn.close()
