@@ -20,32 +20,17 @@ def seed_database():
     conn = get_db()
     
     # Sample users with passwords
-    sampleness={
         sample_users = [
             ("alice", "Password123!"),
             ("bob", "SecurePass456@"),
             ("charlie", "MyPassword789#"),
-            ]
-        sample_pets=[
-            ()
+        ]
 
-    }
-    
-<<<<<<< HEAD
-<<<<<<< HEAD
-    ]
-dlist=[ sample_users, sample_pets]
-=======
     sample_pets = [
         ("alice", "dog", "Gunner", 13),
         ("bob", "cat", "Vessel", 984),
         ("charlie", "dog", "Pumpkin", 403002),
     ]
->>>>>>> 12f0fea (thursday work)
-=======
-    ]
-dlist=[ sample_users, sample_pets]
->>>>>>> e356aae (seed_db update)
 
     try:
         for username, password in sample_users:
