@@ -31,8 +31,16 @@ def seed_database():
 
     }
     
+<<<<<<< HEAD
     ]
 dlist=[ sample_users, sample_pets]
+=======
+    sample_pets = [
+        ("alice", "dog", "Gunner", 13),
+        ("bob", "cat", "Vessel", 984),
+        ("charlie", "dog", "Pumpkin", 403002),
+    ]
+>>>>>>> 12f0fea (thursday work)
 
     try:
         for username, password in sample_users:
@@ -43,6 +51,14 @@ dlist=[ sample_users, sample_pets]
             )
             print(f"Created user: {username}")
         
+        for username, pet_type, pet_name, pets in sample_pets:
+            # hashed_pw = bcrypt.hashpw(password.encode("utf-8"), bcrypt.gensalt())
+            conn.execute(
+                "INSERT INTO player_data (username, pet_type, pet_name, pets) VALUES (?, ?, ?, ?)",
+                (username, pet_type, pet_name, pets)
+            )
+            print(f"Created user: {username}")
+
         conn.commit()
         print("\nDatabase seeding complete!")
     
